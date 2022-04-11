@@ -1,0 +1,6 @@
+mixin storeForm(store = {})
+  form(action=`/add/${store._id || ''}` method="POST" class="card")
+    label(for="name") Data
+    input(type="text" name="name" value=store.date)
+    
+    input(type="submit" value='save =>' class="button")

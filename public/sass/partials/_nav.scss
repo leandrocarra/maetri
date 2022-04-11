@@ -6,4 +6,19 @@
   height: 82px;
   left: 0px;
   background-color: #35BFEE;
+  justify-content: center;
+  color: #fff;
+  p {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+}
+.linkHead {
+  
+}
+.feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
 }

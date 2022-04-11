@@ -3,9 +3,10 @@ extends layout
 include mixins/_storeCard
 
 block content
+  .feature
+    != h.icon('last')
   .inner 
-    h2= title
-    .stores
-      each store in stores
-        h2= store.name
-          +storeCard(store)
+    p.headerTitle Envios: 
+    .storeBg
+        each store in stores
+            +storeCard(store)

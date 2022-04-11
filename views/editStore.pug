@@ -3,6 +3,10 @@ extends layout
 include mixins/_storeForm
 
 block content
-  .inner 
-    h2= title
-    +storeForm(store)
+  .inner
+    .headerTitle
+      form.card
+        label(for="date") Data Title
+        input(type="text" name="date")
+      p= title
+      +storeForm(store)

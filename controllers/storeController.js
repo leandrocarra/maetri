@@ -47,12 +47,12 @@ exports.createStore = async (req, res) => {
 
 exports.getStores = async (req, res) => {
   const stores = await Store.find();
-  res.render('stores', { title: 'istoria', stores });
+  res.render('stores', { title: 'Maetri', stores });
 }
 
 exports.editStore = async (req, res) => {
   const store = await Store.findOne({ _id: req.params.id});
-  res.render('editStore', { title: `Edit ${store.name}`, store })
+  res.render('editStore', { title: `Editando ${store.name}`, store })
 }
 
 exports.updateStore = async (req, res) => {
@@ -60,7 +60,7 @@ exports.updateStore = async (req, res) => {
     new: true,
     runValidators: true
   }).exec();
-  req.flash('success', `Update com sucesso em <strong>${store.name}</strong>.<a href="/stores/${store.slug}">View Store => </a>`);
+  req.flash('success', `Update com sucesso em <strong>${store.name}</strong>`);
   res.redirect(`/stores/${store._id}/edit`);
 }
 
